@@ -49,9 +49,21 @@ namespace Layouts_App
             Content = stack;
         }
 
+        int i = 0;
+
         private void Editor_TextChanged(object sender, TextChangedEventArgs e)
         {
-            lbl.Text=editor.Text;
+           //lbl.Text=editor.Text;
+            editor.TextChanged -= Editor_TextChanged;
+            char key = e.NewTextValue?.LastOrDefault() ?? ' ';
+
+            if (key =='A' || key == 'a')
+            {
+                i++;
+                lbl.Text = key.ToString() + ": " + i;
+            }
+
+            editor.TextChanged += Editor_TextChanged;
         }
 
         private async void Tagasi_btn_Clicked (object sender, EventArgs e)
