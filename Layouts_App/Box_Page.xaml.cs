@@ -42,6 +42,7 @@ namespace Layouts_App
             box.Color = Color.FromRgb(rnd.Next(0,255), rnd.Next(0,255), rnd.Next(0,255));
             box.WidthRequest = box.Width + 10;
             box.HeightRequest = box.Height + 10;
+
             if (box.HeightRequest > (int)DeviceDisplay.MainDisplayInfo.Height/5) 
             {
                 box.HeightRequest = 300;
