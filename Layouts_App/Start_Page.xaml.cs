@@ -34,15 +34,23 @@ namespace Layouts_App
                 BackgroundColor = Color.FromRgb(223, 45, 170)
             };
 
+            Button Valgusfoor_btn = new Button
+            {
+                Text = "Valgusfoor Page",
+                BackgroundColor = Color.FromRgb(218, 70, 210)
+            };
+
             StackLayout st = new StackLayout();
             st.Children.Add(Editor_btn);
             st.Children.Add(Timer_btn);
             st.Children.Add(Box_btn);
+            st.Children.Add(Valgusfoor_btn);
             Content = st;
 
             Editor_btn.Clicked += Editor_btn_Clicked;
             Timer_btn.Clicked += Timer_btn_Clicked;
             Box_btn.Clicked += Box_btn_Clicked;
+            Valgusfoor_btn.Clicked += Valgusfoor_btn_Clicked;
         }
 
         private async void Box_btn_Clicked(object sender, EventArgs e)
@@ -60,6 +68,11 @@ namespace Layouts_App
             await Navigation.PushAsync(new Editor_Page());
         }
 
-        
+        private async void Valgusfoor_btn_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Valgusfoor_Page());
+        }
+
+
     }
 }
