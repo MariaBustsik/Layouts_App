@@ -12,7 +12,7 @@ namespace Layouts_App
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RGB_Page : ContentPage
     {
-        Label lb1, lb2, lb3;
+        Label lbl1, lbl2, lbl3;
         BoxView bv;
         Frame fr;
         Slider sld1, sld2, sld3;
@@ -25,7 +25,7 @@ namespace Layouts_App
             {
                 BackgroundColor = Color.Black
             };
-            lb1 = new Label
+            lbl1 = new Label
             {
                 TextColor = Color.Black,
                 FontSize = 18,
@@ -42,7 +42,7 @@ namespace Layouts_App
                 ThumbColor = Color.Red
 
             };
-            lb1 = new Label
+            lbl1 = new Label
             {
                 TextColor = Color.Black,
                 FontSize = 18,
@@ -60,7 +60,7 @@ namespace Layouts_App
                 ThumbColor = Color.Red
 
             };
-            lb2 = new Label
+            lbl2 = new Label
             {
                 TextColor = Color.Black,
                 FontSize = 18,
@@ -79,7 +79,7 @@ namespace Layouts_App
 
             };
 
-            lb3 = new Label
+            lbl3 = new Label
             {
                 TextColor = Color.Black,
                 FontSize = 18,
@@ -140,7 +140,7 @@ namespace Layouts_App
             stp3.ValueChanged += Stp1_ValueChanged;
             StackLayout st = new StackLayout
             {
-                Children = { fr, sld1, lb1, sld2, lb2, sld3, lb3, stp1, stp2, stp3, btn }
+                Children = { fr, sld1, lbl1, sld2, lbl2, sld3, lbl3, stp1, stp2, stp3, btn }
             };
             Content = st;
         }
@@ -158,18 +158,18 @@ namespace Layouts_App
         {
             if (sender == stp1)
             {
-                lb1.Text = String.Format("Red = {0:X2}", (int)args.NewValue);
+                lbl1.Text = String.Format("Red = {0:X2}", (int)args.NewValue);
                 sld1.Value = stp1.Value;
 
             }
             else if (sender == stp2)
             {
-                lb2.Text = String.Format("Green = {0:X2}", (int)args.NewValue);
+                lbl2.Text = String.Format("Green = {0:X2}", (int)args.NewValue);
                 sld2.Value = stp2.Value;
             }
             else if (sender == stp3)
             {
-                lb3.Text = String.Format("Blue = {0:X2}", (int)args.NewValue);
+                lbl3.Text = String.Format("Blue = {0:X2}", (int)args.NewValue);
                 sld3.Value = stp3.Value;
             }
             bv.Color = Color.FromRgb((int)stp1.Value, (int)stp2.Value, (int)stp3.Value);
@@ -189,16 +189,16 @@ namespace Layouts_App
         {
             if (sender == sld1)
             {
-                lb1.Text = String.Format("Red = {0:X2}", (int)args.NewValue);
+                lbl1.Text = String.Format("Red = {0:X2}", (int)args.NewValue);
             }
             else if (sender == sld2)
             {
-                lb2.Text = String.Format("Green = {0:X2}", (int)args.NewValue);
+                lbl2.Text = String.Format("Green = {0:X2}", (int)args.NewValue);
 
             }
             else if (sender == sld3)
             {
-                lb3.Text = String.Format("Blue = {0:X2}", (int)args.NewValue);
+                lbl3.Text = String.Format("Blue = {0:X2}", (int)args.NewValue);
             }
             bv.Color = Color.FromRgb((int)sld1.Value, (int)sld2.Value, (int)sld3.Value);
         }
