@@ -12,9 +12,9 @@ namespace Layouts_App
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Start_Page : ContentPage
     {
-        List<ContentPage> pages=new List<ContentPage>() { new Editor_Page(), new Timer_Page(), new Box_Page(), new Valgusfoor_Page(), new Date_Time(), new StepperSlider_Page(), new RGB_Page(), new Image_Page(), new Frame_Page(), new Horoskop_Page ()};
+        List<ContentPage> pages=new List<ContentPage>() { new Editor_Page(), new Timer_Page(), new Box_Page(), new Valgusfoor_Page(), new Date_Time(), new StepperSlider_Page(), new RGB_Page(), new Image_Page(), new Frame_Page(), new Horoskop_Page (), new Picker_Page(), new Table_Page()};
 
-        List<string> texts=new List<string> { "Editor Page", "Timer", "Box Page", "Valgusfoor Page", "Date/Time Page", "Stepper Slider Page", "RGB Page", "Image Page", "Frame Page", "Horoskop Page"};
+        List<string> texts=new List<string> { "Editor Page", "Timer", "Box Page", "Valgusfoor Page", "Date/Time Page", "Stepper Slider Page", "RGB Page", "Image Page", "Frame Page", "Horoskop Page", "Picker Page", "Table Page"};
         Random random = new Random();
         public Start_Page()
         {
